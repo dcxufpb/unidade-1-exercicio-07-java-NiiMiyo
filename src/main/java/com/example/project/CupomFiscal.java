@@ -5,7 +5,8 @@ public class CupomFiscal {
 	private static final String ENDLN = System.lineSeparator();
 
 	private static boolean isEmpty(String str){
-		return (str == null || str.isBlank());
+		int spaceCount = str.length() - str.replace(".", "").length();
+		return (str == null || spaceCount == str.length());
 	}
 
 	public static String dadosLojaParam(String nomeLoja, String logradouro, int numero, String complemento,
